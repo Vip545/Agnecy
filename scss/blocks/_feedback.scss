@@ -1,0 +1,152 @@
+.feedback {
+    padding-top: 90px;
+    padding-bottom: 110px;
+    padding-left: calc(50% - 1250px / 2);
+
+    @include mobile-contacts {
+        padding-left: 15px;
+        padding-bottom: 0;
+    }
+}
+
+.feedback__top {
+    @include mobile-contacts {
+        @include flex;
+    }
+}
+
+.feedback__heading {
+    @include text-heading-section;
+    letter-spacing: 0.3834px;
+    text-transform: uppercase;
+}
+
+.feedback-text {
+    padding-top: 30px;
+    padding-bottom: 58px;
+    max-width: 753px;
+    padding-right: 15px;
+}
+
+.feedback__line {
+    margin-bottom: 74px;
+}
+
+.feedback__body {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile-contacts {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.feedback__form-body {
+    @include text;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 731px;
+    line-height: 28px;
+    padding-right: 15px;
+
+    @include media-xs {
+        margin-top: 40px;
+        justify-content: center;
+    }
+}
+
+.feedback__input {
+    box-sizing: border-box;
+    padding-left: 54px;
+    padding-right: 54px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 45px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 339px;
+    height: 69px;
+
+    @include media-xs {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+.feedback__textarea {
+    @include text;
+    resize: none;
+    width: 100%;
+    max-width: 731px;
+    height: 252px;
+    box-sizing: border-box;
+    padding: 28px 50px;
+    margin-bottom: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    @include media-xs {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+.feedback__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 731px;
+    height: 72px;
+    color: $white;
+    background-color: $accent;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: $color-contacts;
+        color: $accent;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    background-color: $color-contacts;
+    color: $white;
+    min-height: 481px;
+    margin-left: 104px;
+    padding: 136px 79px;
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    @include mobile-contacts {
+        width: 100%;
+        margin-left: -58px;
+        margin-top: 54px;
+        background-color: $color-grey;
+    }
+}
+
+.contacts__heading {
+    @include text-button;
+    line-height: 34px;
+    letter-spacing: 0.3170px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.contacts__text {
+    @include text;
+    line-height: 28px;
+    color: $white;
+    max-width: 315px;
+}

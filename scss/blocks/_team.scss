@@ -1,0 +1,167 @@
+.team {
+    text-shadow: $shadow;
+}
+
+.team__top {
+    @include media-xl {
+        @include flex;
+        display: flex;
+        text-align: center
+    }
+}
+
+.team__heading {
+    @include text-heading-section;
+    line-height: 0px;
+    letter-spacing: 0.4px;
+    margin-top: 76px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+}
+
+.team__text {
+    line-height: 28px;
+    max-width: 472px;
+
+    @include media-xl {
+        max-width: 550px;
+    }
+
+    @include media-xs {
+        margin-bottom: 40px;
+    }
+}
+
+.team__line {
+    margin-top: 33px;
+    margin-bottom: 68px;
+
+    @include media-xs {
+        margin: 0 auto;
+    }
+}
+
+.team__main {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-xl {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.team__lead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(226, 226, 130);
+    max-width: 321px;
+    height: 458px;
+    box-shadow: $shadow;
+
+    @include media-xxl {
+        margin-right: 15px;
+    }
+
+    @include media-xs {
+        margin-top: 48px;
+    }
+}
+
+.team__block {
+    margin-left: 100px;
+    margin-top: 5px;
+
+    @include media-xxl {
+        margin: 0;
+    }
+
+    @include media-xl {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center
+    }
+}
+
+.team__name {
+    @include name-heading;
+    padding-top: 2px;
+    padding-bottom: 15px;
+
+    @include media-xl {
+        padding-top: 15px;
+    }
+}
+
+.team__block-text {
+    @include text;
+    max-width: 635px;
+    line-height: 28px;
+}
+
+.team__social-menu {
+    display: flex;
+    gap: 30px;
+    padding-top: 41px;
+    padding-bottom: 53px;
+
+    @include media-xs {
+        gap: 15px;
+    }
+}
+
+.team__link {
+    @include social-text;
+    letter-spacing: 0.9px;
+
+    &:hover {
+        text-decoration: underline solid 2px;
+    }
+}
+
+.team__members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    padding-top: 5px;
+
+    @include media-xl {
+        justify-content: center;
+    }
+}
+
+.team__member {
+    position: relative;
+    box-shadow: $shadow;
+}
+
+.team__member-link {
+    display: flex;
+    width: 196px;
+    height: 216px;
+    background-color: rgb(149, 186, 166);
+    color: $white;
+}
+
+.team__member-text {
+    @include member-heading;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    mix-blend-mode: normal;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.team__member:hover .team__member-text {
+    opacity: 1;
+}

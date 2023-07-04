@@ -1,0 +1,80 @@
+.services__main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 2px solid $color-line;
+    padding-top: 98px;
+    padding-bottom: 109px;
+
+    @include media-xl {
+        @include flex;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+.services__intro {
+    max-width: 538px;
+    padding-bottom: 60px;
+
+    @include media-xl {
+        @include flex;
+        max-width: 550px;
+    }
+}
+
+.services__heading {
+    @include text-heading-section;
+    line-height: 55px;
+    text-transform: uppercase;
+
+    @include media-xs {
+        line-height: 42px;
+    }
+}
+
+.services__text {
+    margin-top: 36px;
+    margin-bottom: 58px;
+}
+
+.services__button {
+    background: rgba(0, 0, 0, 0.0001);
+    border: 2px solid $primary;
+    color: $accent;
+    transition: all .3s ease;
+
+    &:hover {
+        background: $primary;
+        color: $white;
+    }
+}
+
+.services__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 53px 37px;
+
+    @include media-xs {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px 20px;
+        margin-top: 25px;
+        justify-items: center;
+        text-align: center;
+    }
+}
+
+.services__card {
+    max-width: 290px;
+
+    @include media-xl {
+        max-width: 450px;
+    }
+}
+
+.services__title {
+    @include text-heading-article;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}

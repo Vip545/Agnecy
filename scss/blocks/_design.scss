@@ -1,0 +1,78 @@
+.design__main {
+    background-color: $color-design;
+    color: $white;
+    margin-top: 117px;
+}
+
+.design__heading {
+    @include text-heading-section;
+    line-height: 24px;
+    letter-spacing: 1.05px;
+    text-align: center;
+    padding-top: 159px;
+
+    @include media-xxl {
+        line-height: normal;
+    }
+
+    @include media-xs {
+        padding-top: 100px;
+    }
+}
+
+.design__text {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 58px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 141px;
+    color: $color-design;
+
+    @include media-xs {
+        flex-wrap: wrap;
+        padding-bottom: 100px;
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 15px;
+    }
+}
+
+.form__email {
+    width: 524px;
+    height: 82px;
+    padding-left: 38px;
+    padding-right: 10px;
+    background: $white;
+    border-radius: 5px;
+    margin-right: 19px;
+
+    @include media-xs {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.form__button {
+    width: 217px;
+    height: 82px;
+    background-color: $accent;
+    line-height: 34px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    transition: all 200ms ease;
+    color: $white;
+
+    &:hover {
+        background: $white;
+        color: $accent;
+        box-shadow: inset 0 0 0 1px $accent;
+    }
+
+    @include media-xs {
+        width: 100%;
+    }
+}

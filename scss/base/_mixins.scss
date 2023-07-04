@@ -1,0 +1,148 @@
+/* Text */
+
+@mixin text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+
+    @include media-xs {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@mixin social-text {
+    color: $black;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    @include media-xs {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@mixin member-heading {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.1651px;
+    text-transform: uppercase;
+
+    @include media-xs {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@mixin name-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    @include media-xs {
+        font-size: 28px;
+    }
+}
+
+@mixin text-nav {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+
+    @include media-xs {
+        font-size: 20px;
+    }
+}
+
+@mixin text-heading-article {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+
+    @include media-xs {
+        font-size: 22px;
+    }
+}
+
+@mixin text-header-nav {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+@mixin text-button {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+
+    @include media-xs {
+        font-size: 16px;
+    }
+}
+
+@mixin text-heading-section {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+
+    @include media-xs {
+        font-size: 30px;
+    }
+}
+
+@mixin text-heading {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 60px;
+
+    @include media-xs {
+        font-size: 36px;
+    }
+}
+
+/* Mobile */
+
+@mixin mobile-contacts {
+    @media screen and (max-width: $mobile-contacts) {
+        @content;
+    }
+}
+
+@mixin media-xxl {
+    @media screen and (max-width: $mobile-xxl) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (max-width: $mobile-xl) {
+        @content;
+    }
+}
+
+@mixin media-m {
+    @media screen and (max-width: $mobile-m) {
+        @content;
+    }
+}
+
+@mixin media-xs {
+    @media screen and (max-width: $mobile-xs) {
+        @content;
+    }
+}
+
+
+/* Flex */
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
